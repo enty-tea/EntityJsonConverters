@@ -23,7 +23,7 @@ namespace EntyTea.JsonConverters.UnitTests.Tests
   ""createdOnString"": ""2002-02-02"",
   ""createdByUserIdentifier"": ""dec17ee8-25da-48e0-b560-8e02a7b639d0""
 }";
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(NormalizeLineBreaks(expected), NormalizeLineBreaks(actual));
         }
 
         [TestCase(typeof(SampleEntityJsonSerializer))]
@@ -47,7 +47,7 @@ namespace EntyTea.JsonConverters.UnitTests.Tests
   ""createdOnString"": ""2002-02-02"",
   ""createdByUserIdentifier"": ""dec17ee8-25da-48e0-b560-8e02a7b639d0""
 }";
-            Assert.AreEqual(expected, actual.ReadToEnd());
+            Assert.AreEqual(NormalizeLineBreaks(expected), NormalizeLineBreaks(actual.ReadToEnd()));
         }
 
         [TestCase(typeof(SampleEntityJsonSerializer))]
@@ -117,6 +117,12 @@ namespace EntyTea.JsonConverters.UnitTests.Tests
                 CreatedOn = new DateTime(2002, 2, 2), 
                 CreatedByUserIdentifier = new Guid("DEC17EE8-25DA-48E0-B560-8E02A7B639D0")
             };
+        }
+
+        private static string NormalizeLineBreaks(string json)
+        {
+            if (json == null) return null;
+            return json.Replace("\r\n", "\n").Replace("\r", "\n");
         }
 
         #endregion
