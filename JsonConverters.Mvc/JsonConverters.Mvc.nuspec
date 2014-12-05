@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>EntyTea.EntityJsonConverters.Mvc</id>
+		<version>$version$</version>
+		<title>EntityJsonConverters.MVC</title>
+		<authors>enty-tea</authors>
+		<owners>enty-tea</owners>
+		<projectUrl>https://github.com/enty-tea/EntityJsonConverters</projectUrl>
+		<licenseUrl>https://github.com/enty-tea/EntityJsonConverters/blob/master/LICENSE</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A .NET library that provides ASP.NET MVC model binders based on customizable JSON parsers.</description>
+		<tags>entity json converter parser serializer mvc</tags>
+		<dependencies>
+			<dependency id="Microsoft.AspNet.Mvc" version="5.2.2" />
+			<dependency id="Newtonsoft.Json" version="6.0.6" />
+			<dependency id="EntyTea.EntityJsonConverters" version="1.0.0" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\EntyTea.JsonConverters.Mvc.dll" target="lib\net45" />
+		<file src="bin\Release\EntyTea.JsonConverters.Mvc.xml" target="lib\net45" />
+	</files>
+</package>
