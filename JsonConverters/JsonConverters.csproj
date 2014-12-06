@@ -35,9 +35,6 @@
     <DocumentationFile>bin\Release\EntityJsonConverters.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LatticeUtils">
-      <HintPath>..\packages\LatticeUtils.Core.1.0.5.2\lib\net40-Client\LatticeUtils.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -54,10 +51,10 @@
     <Compile Include="IEntityJsonObjectSerializer.cs" />
     <Compile Include="IEntityJsonParser.cs" />
     <Compile Include="IEntityJsonSerializer.cs" />
-    <Compile Include="JObjectParseExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="JsonConverters.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
